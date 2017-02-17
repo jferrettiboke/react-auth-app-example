@@ -20,7 +20,7 @@ export default function(ComposedComponent) {
     }
 
     render() {
-      return <ComposedComponent {...this.props} />
+      return this.props.authenticated ? <ComposedComponent {...this.props} /> : null
     }
   }
 
